@@ -7,6 +7,8 @@ If you want to see a Fable app including elmish, check [minimal-elmish-react](ht
 
 More sample apps can be found in [fable2-samples](https://github.com/fable2-samples)
 
+See [NuGet Fable must haves](https://nugetmusthaves.com/Tag/Fable) for a list of great Nuget packages for your app to build on.
+
 ## App design
 
 The app simply calls `init` which gets the first `<canvas>` element in the document (`index.html`).
