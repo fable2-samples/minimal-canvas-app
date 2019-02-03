@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "paket:mono": "mono .paket/paket.exe install",
+    "paket": ".paket/paket.exe install"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",

@@ -36,8 +36,18 @@ On a Mac or Linux, paket needs to be run via [mono](https://www.mono-project.com
 For now, something like:
 
 ```bash
-mono .paket/paket.exe install
+$ mono .paket/paket.exe install
+Paket version 5.196.0
+Resolving packages for group Main:
+ - Fable.Core 2.0.3
+ - Fable.Import.Browser 1.3.0
+ - FSharp.Core 4.6.1
+...
 ```
+
+Or try the included in `paket` npm scripts:
+
+- `npm run paket:mono`
 
 ## Project structure
 
