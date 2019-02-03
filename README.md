@@ -22,18 +22,34 @@ Then it gets the 2D context of the canvas and draws two rectangles, a red and a 
 
 ## Building and running the app
 
-- Install JS dependencies: `npm install`
-- Start Webpack dev server: `npx webpack-dev-server` or `npm start`
-- After the first compilation is finished, in your browser open: http://localhost:8080/
+### Install dependencies
 
-Any modification you do to the F# code will be reflected in the web page after saving.
+You will need to install both .NET and JS dependencies for your Fable app to compile, build and run.
 
-### Paket
+#### npm JS dependencies
+
+- `npm install` or `yarn install`
+
+#### restore dotnet dependencies
+
+ie. `dotnet restore`
+
+Run `npm run restore` to restore dotnet dependencies
+
+### Use Paket to install nuget dependencies
 
 Use [Paket](https://fsprojects.github.io/Paket/) to install paket depedencies.
-See `.paket` folder for `paket.exe` and config.
-On a Mac or Linux, paket needs to be run via [mono](https://www.mono-project.com)
-For now, something like:
+`paket.exe` is available in the `.paket` folder
+
+Run `paket` via one of the included npm scripts:
+
+- `npm run paket` (Windows)
+- `npm run paket:mono` (Mac/Linux)
+
+#### Mac/Linux
+
+On a Mac or Linux, `paket.exe` needs to be run via [mono](https://www.mono-project.com)
+You can manually run a `paket install` as follows:
 
 ```bash
 $ mono .paket/paket.exe install
@@ -45,9 +61,17 @@ Resolving packages for group Main:
 ...
 ```
 
-Or try the included in `paket` npm scripts:
+### Start web development server (hot reload)
 
-- `npm run paket:mono`
+- Start Webpack dev server:
+
+`npx webpack-dev-server` or `npm start`
+
+After the first compilation is finished:
+
+- open browser: http://localhost:8080/
+
+Any modification you do to the F# code will be reflected in the web page after saving.
 
 ## Project structure
 

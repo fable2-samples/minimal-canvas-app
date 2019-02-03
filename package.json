@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server",
+    "restore": "dotnet restore src/App.fsproj",
     "paket:mono": "mono .paket/paket.exe install",
     "paket": ".paket/paket.exe install"
   },
