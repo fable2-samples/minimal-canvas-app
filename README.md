@@ -28,6 +28,17 @@ Then it gets the 2D context of the canvas and draws two rectangles, a red and a 
 
 Any modification you do to the F# code will be reflected in the web page after saving.
 
+### Paket
+
+Use [Paket](https://fsprojects.github.io/Paket/) to install paket depedencies.
+See `.paket` folder for `paket.exe` and config.
+On a Mac or Linux, paket needs to be run via [mono](https://www.mono-project.com)
+For now, something like:
+
+```bash
+mono .paket/paket.exe install
+```
+
 ## Project structure
 
 ### npm
