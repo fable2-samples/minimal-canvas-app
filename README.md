@@ -9,6 +9,8 @@ More sample apps can be found in [fable2-samples](https://github.com/fable2-samp
 
 See [NuGet Fable must haves](https://nugetmusthaves.com/Tag/Fable) for a list of great Nuget packages for your app to build on.
 
+Check out [elmish](https://elmish.github.io/elmish/) to add an "elmish" architecture to your app.
+
 ## App design
 
 The app simply calls `init` which gets the first `<canvas>` element in the document (`index.html`).
@@ -21,6 +23,20 @@ Then it gets the 2D context of the canvas and draws two rectangles, a red and a 
 - [dotnet SDK](https://www.microsoft.com/net/download/core) 2.1 or higher
 - [node.js](https://nodejs.org) with [npm](https://www.npmjs.com/)
 - An F# editor like Visual Studio, Visual Studio Code with [Ionide](http://ionide.io/) or [JetBrains Rider](https://www.jetbrains.com/rider/).
+
+### Build/Run infrastructure
+
+#### paket
+
+This app comes with `paket.exe` in the `.paket` folder. You can however also install paket as a global .NET tool to be used across projects.
+
+```bash
+$ dotnet tool install --tool-path ".paket" Paket --add-source https://api.nuget.org/v3/index.json --framework netcoreapp2.1
+```
+
+#### Mac OSX/Linux
+
+On a Non-Windows OS such as Mac or Linux (also known as \*nix), you will need [mono](https://www.mono-project.com) in order to run `.exe` (Windows executable) files such as paket.exe
 
 ## Building and running the app
 
